@@ -17,6 +17,18 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            position: relative;
+        }
+
+        /* New style for the button */
+        #toggleButton {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 50px;
+            height: auto;
         }
 
         main {
@@ -53,14 +65,17 @@
 <body>
 
 <header>
+    <!-- Added button with id 'toggleButton' and scaled image -->
     <h1>MMMMMMMMMMMMMMMMM</h1>
+    <div id="toggleButton" onclick="toggleSidebar()"> 
+        <img src="images/sidebar.ico" alt="Toggle Sidebar" style="width: 100%;">
+    </div>
 </header>
 
 <main>
     <nav>        
         <a href="https://github.com/subortinaiti" target="_self">My Github</a>
         <a href="isgta6out.html">Is GTA 6 Out Yet?</a>
-
     </nav>
 
     <section>
@@ -68,6 +83,14 @@
         <p>This is the homepage content. sium sium sium, sium sium sium.</p>
     </section>
 </main>
+
+<script>
+    // JavaScript function to toggle the visibility of the sidebar
+    function toggleSidebar() {
+        var sidebar = document.querySelector('nav');
+        sidebar.style.display = (sidebar.style.display === 'none' || sidebar.style.display === '') ? 'block' : 'none';
+    }
+</script>
 
 </body>
 </html>
