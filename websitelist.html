@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #websiteList {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div id="websiteList"></div>
+
+<script>
+    // Relative path to the JSON file
+    const jsonFilePath = 'data/websites.json';
+
+    // Fetch the JSON data
+    fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+            const websitesData = data.websites;
+            const websiteListContainer = document.getElementById('websiteList');
+
+            // Create and append links to the websiteList container
+            websitesData.forEach(website => {
+                const link = document.createElement('a');
+                link.href = website.URL;
+                link.textContent = website.name;
+                websiteListContainer.appendChild(link);
+            });
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+</script>
+
+</body>
+</html>
