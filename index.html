@@ -24,7 +24,7 @@
         #toggleButton {
             position: absolute;
             top: 50%;
-            left: 10px;
+            left: 50px;
             transform: translateY(-50%);
             cursor: pointer;
             width: 50px;
@@ -66,7 +66,7 @@
 <body>
 
 <header>
-    <!-- Added button with id 'toggleButton' and scaled image -->
+
     <h1>MMMMMMMMMMMMMMMMM</h1>
     <div id="toggleButton" onclick="toggleSidebar()"> 
         <img src="images/sidebar.ico" alt="Toggle Sidebar" style="width: 100%;" draggable="false">
@@ -87,7 +87,7 @@
 </main>
 
 <script>
-    // JavaScript function to toggle the visibility of the sidebar
+
     function toggleSidebar() {
         var sidebar = document.querySelector('nav');
         sidebar.style.display = (sidebar.style.display === 'none' || sidebar.style.display === '') ? 'block' : 'none';
