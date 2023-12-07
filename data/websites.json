@@ -1,6 +1,17 @@
 {
-"Youtube":"youtube.com",
-"Example":"example.com"
-
-
+  "websites": [
+    {
+      "name": "Google",
+      "URL": "https://www.google.com"
+    },
+    {
+      "name": "Facebook",
+      "URL": "https://www.facebook.com"
+    },
+    {
+      "name": "Twitter",
+      "URL": "https://www.twitter.com"
+    },
+    // Add more websites as needed
+  ]
 }
